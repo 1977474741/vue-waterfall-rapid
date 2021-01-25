@@ -1,7 +1,6 @@
 {
-  "name": "vue3",
-  "version": "0.1.0",
-  "private": true,
+  "name": "vue-waterfall-rapid",
+  "version": "1.0.0",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
@@ -23,7 +22,5 @@
     "typescript": "~3.9.3",
     "vue-template-compiler": "^2.6.11"
   },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  }
+  "repository": "https://github.com/1977474741/vue-waterfall-rapid.git"
 }
