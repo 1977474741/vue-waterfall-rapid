@@ -20,7 +20,10 @@
 		</div>
 		<div class="main" @scroll="scroll" :style="{width:width+'%'}">
 			<waterfall :col="col" :autoResize="autoResize" :moveTransitionDuration="0.4" :fillBox="fillBox" :col-width="colWidth" :list="list" ref="waterfall" imgKey="src">
-				<!-- 支持指定图片的Key和在img标签上加class两种绑定模式 -->
+				<!-- 两种图片绑定模式
+				1.指定图片的Key（ imgKey="src"）
+				2.在img标签上加class（ class="waterfall-img"） -->
+				<!-- img标签如果设置宽高会渲染的更快 -->
 				<div class="waterfall-item" :class="{bounceIn:item.state == 'show'}" slot-scope="item">
 					<img v-if="item.data.src" style="width: 100%" class="waterfall-img" :src="item.data.src">
 					{{item.index}}-{{item.data.text}}
