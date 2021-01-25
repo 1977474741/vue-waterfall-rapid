@@ -100,12 +100,11 @@
             },
         },
         methods: {
-            repaints(start = 0,duration){
-                this.$nextTick(()=>{
-                    this.mainW = this.getWidth();
-                    this.calcCol();
-                    this.calcXY(start,'repaints',duration);
-                })
+            async repaints(start = 0,duration){
+                await this.$nextTick();
+                this.mainW = this.getWidth();
+                this.calcCol();
+                this.calcXY(start,'repaints',duration);
             },
             init(start = 0){
                 this.calcCol();
@@ -188,7 +187,7 @@
                 }
                 this.calcXY(start);
             },
-            calcXY(index = 0,cause = 'data',duration){
+            async calcXY(index = 0,cause = 'data',duration){
                 let idx = index;
                 this._col = this.__col;
                 for(let i = index; i < this.styleArr.length; i++){
@@ -202,38 +201,36 @@
                         }
                     }
                 }
-                this.$nextTick(()=>{
-                    for(let i = idx; i < this.styleArr.length; i++){
-                        if(!this.styleArr[i]) return;
-                        const e = this.getColDom(i);
-                        if(!e) return;
-                        // 获取当前元素高度
-                        this.styleArr[i].height = e.offsetHeight;
-                        let xy = this.getMinCol(i)
-                        const curTop = xy.curTop,
-                            curCol = xy.curCol,
-                            curBT = curTop + this.styleArr[i].height,
-                            maxH = xy.maxH > curBT ? xy.maxH : curBT;
-                        if(this.moveMode == 'convention'){
-                            this.styleArr[i].left = `${curCol * this.colW}px`;
-                            this.styleArr[i].top = `${curTop}px`;
-                        }else{
-                            this.styleArr[i].transform = `translate3d(${curCol * this.colW}px, ${curTop}px ,0)`; 
-                        }
-                        this.maxH = maxH;
-                        this.styleArr[i].bottomTop = curBT;
-                        this.styleArr[i].col = curCol;
-                        this.styleArr[i].showClass = 'show';
-                        this.styleArr[i].state = 'show';
+                await this.$nextTick();
+                for(let i = idx; i < this.styleArr.length; i++){
+                    if(!this.styleArr[i]) return;
+                    const e = this.getColDom(i);
+                    if(!e) return;
+                    // 获取当前元素高度
+                    this.styleArr[i].height = e.offsetHeight;
+                    let xy = this.getMinCol(i)
+                    const curTop = xy.curTop,
+                        curCol = xy.curCol,
+                        curBT = curTop + this.styleArr[i].height,
+                        maxH = xy.maxH > curBT ? xy.maxH : curBT;
+                    if(this.moveMode == 'convention'){
+                        this.styleArr[i].left = `${curCol * this.colW}px`;
+                        this.styleArr[i].top = `${curTop}px`;
+                    }else{
+                        this.styleArr[i].transform = `translate3d(${curCol * this.colW}px, ${curTop}px ,0)`; 
                     }
-                    this.$forceUpdate();
-                    this.$nextTick(()=>{
-                        this.onRender && this.onRender({
-                            cause: cause,
-                            start: index
-                        });
-                    })
-                })
+                    this.maxH = maxH;
+                    this.styleArr[i].bottomTop = curBT;
+                    this.styleArr[i].col = curCol;
+                    this.styleArr[i].showClass = 'show';
+                    this.styleArr[i].state = 'show';
+                }
+                this.$forceUpdate();
+                await this.$nextTick();
+                this.onRender && this.onRender({
+                    cause: cause,
+                    start: index
+                });
             },
             getMinCol(curIndex){
                 if(!curIndex){
