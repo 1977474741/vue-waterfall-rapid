@@ -5,7 +5,7 @@
 ###### `3.支持自由绑定动画。`
 ###### `4.支持根据容器自适应。`
 demo：https://1977474741.github.io/vue-waterfall-rapid/demo/#/
-<div align=center ><img width="330" height="330" src="https://pubser-res.zhenai.com/other/temp/202101/25/1616397889193.png"/></div>
+<div align=center ><img width="230" height="230" src="https://pubser-res.zhenai.com/other/temp/202101/25/1616397889193.png"/></div>
 
 ## 使用
 #### 1.安装
