@@ -16,7 +16,7 @@ npm i vue-waterfall-rapid
 template
 ```html
 <div class="main" @scroll="scroll">
-    <waterfall :col="col" :autoResize="autoResize" :moveTransitionDuration="0.4" :fillBox="fillBox" :col-        width="colWidth" :list="list" ref="waterfall" imgKey="src">
+    <waterfall :col="col" :autoResize="autoResize" :moveTransitionDuration="0.4" :fillBox="fillBox" :col-width="colWidth" :list="list" ref="waterfall" imgKey="src">
         <!-- 两种图片绑定模式
         1.指定图片的Key（ imgKey="src"）
         2.在img标签上加class（ class="waterfall-img"） -->
@@ -28,6 +28,7 @@ template
     </waterfall>
 </div>
 ```
+
 javascript
 ```javascript
 import waterfall from '@/components/vue-waterfall-rapid.vue'
@@ -61,6 +62,7 @@ export default {
         }
     }
 }
+
 ```
 ### 插槽内属性（slot-scope）
 ```javascript
@@ -75,10 +77,11 @@ export default {
 * 'show'， // 元素显示（可以用来绑定显示动画）
 */
 ```
+
 ### 参数
 | 属性           | 类型   | 缺省值  | 描述  |
 | ------------- |:------:|:------:|:-----:|
-| list      | Array  | 无       |要渲染的数据|
+| list      | Array  | []       |要渲染的数据|
 | imgKey    | String | src      |指定图片在list里的key（或者在img标签上加 class="waterfall-img"）|
 | col       | Number | 3        |列数，手动设置时会覆盖掉colWidth|
 | colWidth  | Number | 0（px）  |列宽，和col冲突时，col优先|
@@ -86,10 +89,12 @@ export default {
 | fillBox   | Boolean | false   |是否填充满容器|
 | moveMode  | String | transform |定位方式（transform、convention）|
 | moveTransitionDuration| Number | 0.4（s）     |位置变化时的过渡时间|
+
 ### 函数
 | 函数名         | 参数          | 返回值  |描述|
 | ------------- |:------:   |:------:|:------:|
 | repaints      |  start（开始的下标），duration（过渡时间 s）  |   无   |手动重绘|
+
 ### 事件
 | 属性名         | 值  | 回调内返回值  |描述|
 | ------------- |:------:|:------:|:------:|
@@ -102,4 +107,5 @@ export default {
  * 'resize'， // 容器宽度改变
  */
 ```
+
 有更好的建议欢迎提issues或者提pr
