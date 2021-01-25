@@ -1,26 +1,22 @@
 {
   "name": "vue-waterfall-rapid",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "description": "基于vue的瀑布流组件",
+  "author": "Api调用师 <1977474741@qq.com>",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
   },
+  "main": "src/components/vue-waterfall-rapid.vue",
+  "repository": "https://github.com/1977474741/vue-waterfall-rapid.git",
   "dependencies": {
-    "core-js": "^3.6.5",
     "vue": "^2.6.11",
-    "vue-class-component": "^7.2.3",
-    "vue-property-decorator": "^8.4.2",
     "vue-router": "^3.2.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-router": "~4.5.0",
-    "@vue/cli-plugin-typescript": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
-    "typescript": "~3.9.3",
     "vue-template-compiler": "^2.6.11"
-  },
-  "repository": "https://github.com/1977474741/vue-waterfall-rapid.git"
+  }
 }

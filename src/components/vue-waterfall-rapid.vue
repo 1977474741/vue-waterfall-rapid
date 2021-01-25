@@ -268,7 +268,7 @@
             },
             loader(src,cb,imgDom = {},i){
                 if(imgDom.height > 0) {
-                    return cb(img)
+                    return cb(imgDom)
                 };
                 if(!src && !imgDom.src) return cb();
                 if(imgDom.src){
