@@ -1,6 +1,6 @@
 let images = [
 	{src:'https://game.gtimg.cn/images/yxzj/img201606/skin/hero-info/513/513-bigskin-4.jpg',text:'天狼绘梦者'},
-	{src:'http://pic1.win4000.com/mobile/2020-06-17/5ee98fa463fe6.jpg',text:'天狼绘梦者'},
+	// {src:'http://pic1.win4000.com/mobile/2020-06-17/5ee98fa463fe6.jpg',text:'天狼绘梦者'},
 	{src:'//game.gtimg.cn/images/yxzj/img201606/skin/hero-info/513/513-bigskin-3.jpg',text:'梁祝'},
 	{src:'http://p7.itc.cn/q_70/images03/20200622/2b25b41fa1934ef8a91e1c5cc401d018.jpeg',text:'天狼绘梦者'},
 	{src:'http://5b0988e595225.cdn.sohucs.com/images/20190103/860efae1ce9a4199b62d5af873b3f396.jpeg',text:'修竹墨客'},
@@ -16,7 +16,7 @@ let images = [
 	{src:'//game.gtimg.cn/images/yxzj/img201606/skin/hero-info/531/531-bigskin-1.jpg',text:'破镜之刃'},
 	{src:'https://up.enterdesk.com/edpic/09/27/bb/0927bb0c7831705c2123d5f481f7761b.jpg',text:'露娜紫霞仙子'},
 	{src:'//game.gtimg.cn/images/yxzj/img201606/skin/hero-info/531/531-bigskin-2.jpg',text:'冰刃幻境'},
-	{src:'http://pic1.win4000.com/wallpaper/2020-04-29/5ea8dffa4caa4.jpg',text:'瑶妹'},
+	// {src:'http://pic1.win4000.com/wallpaper/2020-04-29/5ea8dffa4caa4.jpg',text:'瑶妹'},
 	{src:'//game.gtimg.cn/images/yxzj/img201606/skin/hero-info/531/531-bigskin-3.jpg',text:'炽阳神光'},
 	{src:'//game.gtimg.cn/images/yxzj/img201606/skin/hero-info/518/518-bigskin-3.jpg',text:'神威'},
 	{src:'https://up.enterdesk.com/edpic/d6/be/a7/d6bea7953a832383937b5a95cb21bacb.jpg',text:'街头霸王'},
