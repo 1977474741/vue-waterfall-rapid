@@ -1,6 +1,6 @@
 {
   "name": "vue-waterfall-rapid",
-  "version": "1.0.2",
+  "version": "1.0.21",
   "description": "基于vue的瀑布流组件",
   "author": "Api调用师 <1977474741@qq.com>",
   "scripts": {

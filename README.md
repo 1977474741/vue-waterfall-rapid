@@ -31,7 +31,7 @@ template
 
 javascript
 ```javascript
-import waterfall from '@/components/vue-waterfall-rapid.vue'
+import waterfall from 'vue-waterfall-rapid'
 export default {
     name: 'vue-waterfall-rapid',
     components: {
