@@ -1,6 +1,6 @@
 {
   "name": "vue-waterfall-rapid",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "基于vue的瀑布流组件",
   "author": "Api调用师 <1977474741@qq.com>",
   "scripts": {
@@ -9,6 +9,7 @@
   },
   "main": "src/components/vue-waterfall-rapid.vue",
   "repository": "https://github.com/1977474741/vue-waterfall-rapid.git",
+  "demo": "https://coding-pages-bucket-415964-8382475-13401-506140-1252701316.cos-website.ap-hongkong.myqcloud.com",
   "dependencies": {
     "vue": "^2.6.11",
     "vue-router": "^3.2.0"
