@@ -5,8 +5,8 @@
 ###### `3.支持根据容器改变自适应。`
 ###### `4.支持无图。`
 Demo https://1977474741.github.io/vue-waterfall-rapid/demo/#/
-<div align=center ><img width="230" height="230" src="https://pubser-res.zhenai.com/other/temp/202101/25/1616397889193.png"/></div>
 打不开的话翻墙试一下
+<div align=center ><img width="230" height="230" src="https://pubser-res.zhenai.com/other/temp/202101/25/1616397889193.png"/></div>
 
 ## 使用
 #### 1.安装
