@@ -1,6 +1,6 @@
 <template>
     <div ref="main" class="main" id="main" :style="{height: maxH + 'px'}">
-        <div class="item" :class="[moveMode,styleArr[i] && styleArr[i].showClass]" v-for="(item,i) in list" :style="styleArr[i]" :ref="'item'+i">
+        <div class="item" :class="[moveMode,styleArr[i] && styleArr[i].showClass]" v-for="(item,i) in list" :key="i" :style="styleArr[i]" :ref="'item'+i">
             <slot :state="(styleArr[i] && styleArr[i].state) || 'loading'" :data="item" :index="i"></slot>
         </div>
         <iframe v-if="autoResize" ref="autoExpand" class="autoExpand"></iframe>
