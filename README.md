@@ -1,11 +1,14 @@
+
 # vue-waterfall-rapid
-## 一款基于vue的瀑布流组件，支持各种使用场景，灵活度高，简单易用。
-###### `1.支持没有图片高度 && 不影响渲染速度。`
+## 一款高性能vue瀑布流组件，支持各种使用场景，灵活度高，简单易用。
+###### `1.支持没有图片高度 && 不影响渲染速度、可以拿无尺寸大图测试布局速度。`
 ###### `2.支持自由绑定动画。`
-###### `3.支持根据容器改变自适应。`
+###### `3.支持根据容器尺寸改变自适应。`
 ###### `4.支持无图。`
-Demo https://coding-pages-bucket-415964-8382475-13401-506140-1252701316.cos-website.ap-hongkong.myqcloud.com
+## Demo
+https://coding-pages-bucket-415964-8382475-13401-506140-1252701316.cos-website.ap-hongkong.myqcloud.com
 <div align=center ><img width="230" height="230" src="https://pubser-res.zhenai.com/other/temp/202102/22/16543568946880.png"/></div>
+ps：demo里的图片均没有设置图片高度，如果知道高度是秒出的
 
 ## 使用
 #### 1.安装
