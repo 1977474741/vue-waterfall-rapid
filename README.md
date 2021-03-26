@@ -112,3 +112,5 @@ export default {
 ```
 
 有更好的建议欢迎提issues或者提pr
+
+喜欢的话点个star
