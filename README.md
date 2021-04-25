@@ -5,6 +5,8 @@
 ###### `2.支持自由绑定动画。`
 ###### `3.支持根据容器尺寸改变自适应。`
 ###### `4.支持无图。`
+###### `5.只输出一个长列表，不耦合滚动功能，自由度高，适用场景广。`
+###### `6.图片懒加载功能待开发...`
 ## Demo
 https://coding-pages-bucket-415964-8382475-13401-506140-1252701316.cos-website.ap-hongkong.myqcloud.com
 <div align=center ><img width="230" height="230" src="https://pubser-res.zhenai.com/other/temp/202102/22/16543568946880.png"/></div>

@@ -70,14 +70,14 @@
 		},
 		mounted(){
 			this.$refs.waterfall.onRender = (res)=>{
-				console.log('渲染完毕',res);
+				// console.log('渲染完毕',res);
 			}
 			let i = 18;
 			setTimeout(()=>{
 				setInterval(()=>{
 					i++;
 					if(i > 51)return;
-					console.log(i);
+					// console.log(i);
 					let item = pics[i%pics.length];
 					this.list.push(item)
 				},50)
