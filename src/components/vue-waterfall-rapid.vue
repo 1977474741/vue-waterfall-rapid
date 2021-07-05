@@ -159,24 +159,22 @@
                 },300)
             },
             initItem(start = 0){
-                return new Promise((reslove,reject)=>{
-                    let list = this.list.slice(start);
-                    let loadNum = 0;
-                    list.forEach((e,i)=>{
-                        let _i = i + start;
-                        this.loader(e[this.imgKey],()=>{
-                            loadNum ++;
-                            if(!this.styleArr[_i]){
-                                this.styleArr[_i] = {};
-                            }
-                            this.styleArr[_i].width = this.colW + 'px';
-                            this.styleArr[_i].complete = true;
-                            this.styleArr[_i].state = 'complete';
-                            this.$set(this.styleArr,_i,this.styleArr[_i]);
-                            if(loadNum != list.length)return;
-                            this.waitRender(start);
-                        },this.getColDom(_i).getElementsByClassName('waterfall-img')[0],i);
-                    })
+                let list = this.list.slice(start);
+                let loadNum = 0;
+                list.forEach((e,i)=>{
+                    let _i = i + start;
+                    if(!this.styleArr[_i]){
+                        this.styleArr[_i] = {};
+                    }
+                    this.styleArr[_i].width = this.colW + 'px';
+                    this.loader(e[this.imgKey],()=>{
+                        loadNum ++;
+                        this.styleArr[_i].complete = true;
+                        this.styleArr[_i].state = 'complete';
+                        this.$set(this.styleArr,_i,this.styleArr[_i]);
+                        if(loadNum != list.length)return;
+                        this.waitRender(start);
+                    },this.getColDom(_i).getElementsByClassName('waterfall-img')[0],i);
                 })
             },
             waitRender(start){
@@ -191,7 +189,7 @@
                 let idx = index;
                 this._col = this.__col;
                 for(let i = index; i < this.styleArr.length; i++){
-                    if(!this.styleArr[i]) continue;
+                    if(!this.styleArr[i] || !this.styleArr[i].complete) continue;
                     this.styleArr[i].width = this.colW + 'px';
                     if(this.styleArr[i].showClass){
                         if(duration || this.isTransition){
@@ -203,7 +201,7 @@
                 }
                 await this.$nextTick();
                 for(let i = idx; i < this.styleArr.length; i++){
-                    if(!this.styleArr[i]) return;
+                    if(!this.styleArr[i] || !this.styleArr[i].complete) return;
                     const e = this.getColDom(i);
                     if(!e) return;
                     // 获取当前元素高度
