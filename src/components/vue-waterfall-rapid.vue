@@ -185,18 +185,14 @@
                 }
                 this.calcXY(start);
             },
-            async calcXY(index = 0,cause = 'data',duration){
+            async calcXY(index = 0,cause = 'data',duration = isNaN(duration)?this.moveTransitionDuration : duration){
                 let idx = index;
                 this._col = this.__col;
                 for(let i = index; i < this.styleArr.length; i++){
                     if(!this.styleArr[i] || !this.styleArr[i].complete) continue;
                     this.styleArr[i].width = this.colW + 'px';
                     if(this.styleArr[i].showClass){
-                        if(duration || this.isTransition){
-                            this.styleArr[i]['transition-duration'] = `${duration || this.moveTransitionDuration}s`;
-                        }else if(this.styleArr[i].showClass){
-                            this.styleArr[i]['transition-duration'] = `0s`;
-                        }
+                        this.styleArr[i]['transition-duration'] = `${duration}s`;
                     }
                 }
                 await this.$nextTick();
